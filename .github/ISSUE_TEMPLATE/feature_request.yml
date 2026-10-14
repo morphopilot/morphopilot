@@ -1,0 +1,20 @@
+name: Feature request
+description: Suggest an improvement to the annotation or deployment workflow.
+title: "[Feature] "
+body:
+  - type: textarea
+    attributes:
+      label: User problem
+      description: What task is difficult today, and who needs it?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Proposed behavior and acceptance criteria
+      description: Explain what a working implementation should let a user do.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Alternatives and data requirements
+      description: Note existing workarounds and whether redistributable test data is available.

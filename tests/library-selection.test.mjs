@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import ts from 'typescript';
+const source=readFileSync(new URL('../lib/library-selection.ts',import.meta.url),'utf8');
+const js=ts.transpileModule(source,{compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.ES2022}}).outputText;
+const {resolveLibrarySelection:select}=await import(`data:text/javascript;base64,${Buffer.from(js).toString('base64')}`);
+const tile=(id,confirmed=false)=>({id,volume_id:'A',shape:[23,192,192],confirmed});
+const data={volume:{id:'A',status:'ready'},tiles:[tile('A1',true),tile('A2'),tile('A3')]};
+// A saved ROI from another volume must never win over the user's Load action.
+assert.equal(select(data,'B1').tile.id,'A2');
+assert.equal(select(data,'A1').tile.id,'A1');
+assert.equal(select(data,'A1','A3','12').tile.id,'A3');
+assert.equal(select(data,'A1','A3','12').z,11);
+assert.equal(select(data,'A1','A3','999').z,22);
+assert.equal(select(data,'A1',undefined,'12').z,0);
+assert.equal(select(data,null,'A3','NaN').z,0);
+assert.throws(()=>select(data,'A1','B1'),/does not belong/);
+assert.throws(()=>select({...data,volume:{id:'A',status:'importing'}},null),/not ready/);
+assert.throws(()=>select({...data,tiles:[]},null),/no annotation tiles/);
+assert.equal(select({...data,tiles:data.tiles.map(t=>({...t,confirmed:true}))},null).tile.id,'A1');
+console.log('PASS: library loading isolates parents, preserves saved tiles, rejects mismatched links and maps local Z safely');

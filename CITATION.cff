@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Please cite this software and the upstream methods credited in THIRD_PARTY_NOTICES.md used in your work."
+type: software
+title: "MorphoPilot: Interactive 3D Annotation and Iterative Segmentation"
+abstract: "A self-hosted browser workflow for tiled volumetric annotation, category-specific fine-tuning, and prompt-to-auto segmentation."
+authors:
+  - name: MorphoPilot contributors
+version: 0.1.0
+repository-code: "https://github.com/morphopilot/morphopilot"
+url: "https://morphopilot.github.io/"
+license: Apache-2.0
+keywords:
+  - microscopy
+  - 3D segmentation
+  - interactive annotation
+  - human-in-the-loop

@@ -1,0 +1,390 @@
+// SPDX-License-Identifier: Apache-2.0
+window.MORPHOPILOT_STACK = {
+  "label": "SYNTHETIC procedural neurite fixture",
+  "synthetic": true,
+  "is_model_prediction": false,
+  "initial_z": 12,
+  "frame_count": 25,
+  "frame_width": 192,
+  "frame_height": 192,
+  "columns": 5,
+  "rows": 5,
+  "shape_zyx": [
+    25,
+    192,
+    192
+  ],
+  "raw_sprite": "assets/stack-raw.webp",
+  "mask_sprite": "assets/stack-mask.webp",
+  "spot_raw_sprite": "assets/spot-stack-raw.webp",
+  "spot_mask_sprite": "assets/spot-stack-mask.webp",
+  "coverage": {
+    "neurite": {
+      "bright_threshold_uint16": 400,
+      "bright_voxels": 33172,
+      "unmasked_bright_voxels": 0,
+      "reference_voxels_per_z": [
+        624,
+        759,
+        964,
+        1257,
+        1746,
+        2172,
+        2589,
+        3064,
+        3468,
+        3557,
+        3321,
+        3068,
+        2682,
+        2351,
+        2279,
+        2376,
+        2301,
+        2125,
+        1967,
+        1649,
+        1332,
+        1072,
+        880,
+        710,
+        557
+      ]
+    },
+    "spot": {
+      "bright_threshold_uint16": 400,
+      "bright_voxels": 4051,
+      "unmasked_bright_voxels": 0,
+      "reference_voxels_per_z": [
+        125,
+        203,
+        241,
+        243,
+        219,
+        212,
+        316,
+        453,
+        510,
+        414,
+        325,
+        255,
+        307,
+        325,
+        314,
+        319,
+        351,
+        392,
+        392,
+        362,
+        265,
+        173,
+        99,
+        109,
+        118
+      ]
+    }
+  },
+  "prompts": [
+    {
+      "z": 0,
+      "y": 95,
+      "x": 96,
+      "positive": true
+    },
+    {
+      "z": 0,
+      "y": 107,
+      "x": 96,
+      "positive": false
+    },
+    {
+      "z": 1,
+      "y": 95,
+      "x": 96,
+      "positive": true
+    },
+    {
+      "z": 1,
+      "y": 107,
+      "x": 96,
+      "positive": false
+    },
+    {
+      "z": 2,
+      "y": 96,
+      "x": 96,
+      "positive": true
+    },
+    {
+      "z": 2,
+      "y": 108,
+      "x": 96,
+      "positive": false
+    },
+    {
+      "z": 3,
+      "y": 95,
+      "x": 96,
+      "positive": true
+    },
+    {
+      "z": 3,
+      "y": 107,
+      "x": 96,
+      "positive": false
+    },
+    {
+      "z": 4,
+      "y": 95,
+      "x": 96,
+      "positive": true
+    },
+    {
+      "z": 4,
+      "y": 107,
+      "x": 96,
+      "positive": false
+    },
+    {
+      "z": 5,
+      "y": 96,
+      "x": 100,
+      "positive": true
+    },
+    {
+      "z": 5,
+      "y": 108,
+      "x": 100,
+      "positive": false
+    },
+    {
+      "z": 6,
+      "y": 96,
+      "x": 93,
+      "positive": true
+    },
+    {
+      "z": 6,
+      "y": 96,
+      "x": 105,
+      "positive": false
+    },
+    {
+      "z": 7,
+      "y": 96,
+      "x": 94,
+      "positive": true
+    },
+    {
+      "z": 7,
+      "y": 96,
+      "x": 106,
+      "positive": false
+    },
+    {
+      "z": 8,
+      "y": 96,
+      "x": 94,
+      "positive": true
+    },
+    {
+      "z": 8,
+      "y": 96,
+      "x": 106,
+      "positive": false
+    },
+    {
+      "z": 9,
+      "y": 96,
+      "x": 94,
+      "positive": true
+    },
+    {
+      "z": 9,
+      "y": 96,
+      "x": 106,
+      "positive": false
+    },
+    {
+      "z": 10,
+      "y": 96,
+      "x": 94,
+      "positive": true
+    },
+    {
+      "z": 10,
+      "y": 96,
+      "x": 106,
+      "positive": false
+    },
+    {
+      "z": 11,
+      "y": 96,
+      "x": 93,
+      "positive": true
+    },
+    {
+      "z": 11,
+      "y": 108,
+      "x": 93,
+      "positive": false
+    },
+    {
+      "z": 12,
+      "y": 93,
+      "x": 93,
+      "positive": true
+    },
+    {
+      "z": 12,
+      "y": 105,
+      "x": 93,
+      "positive": false
+    },
+    {
+      "z": 13,
+      "y": 94,
+      "x": 93,
+      "positive": true
+    },
+    {
+      "z": 13,
+      "y": 106,
+      "x": 93,
+      "positive": false
+    },
+    {
+      "z": 14,
+      "y": 94,
+      "x": 93,
+      "positive": true
+    },
+    {
+      "z": 14,
+      "y": 106,
+      "x": 93,
+      "positive": false
+    },
+    {
+      "z": 15,
+      "y": 93,
+      "x": 93,
+      "positive": true
+    },
+    {
+      "z": 15,
+      "y": 105,
+      "x": 93,
+      "positive": false
+    },
+    {
+      "z": 16,
+      "y": 92,
+      "x": 93,
+      "positive": true
+    },
+    {
+      "z": 16,
+      "y": 104,
+      "x": 93,
+      "positive": false
+    },
+    {
+      "z": 17,
+      "y": 93,
+      "x": 93,
+      "positive": true
+    },
+    {
+      "z": 17,
+      "y": 105,
+      "x": 93,
+      "positive": false
+    },
+    {
+      "z": 18,
+      "y": 93,
+      "x": 93,
+      "positive": true
+    },
+    {
+      "z": 18,
+      "y": 105,
+      "x": 93,
+      "positive": false
+    },
+    {
+      "z": 19,
+      "y": 93,
+      "x": 93,
+      "positive": true
+    },
+    {
+      "z": 19,
+      "y": 105,
+      "x": 93,
+      "positive": false
+    },
+    {
+      "z": 20,
+      "y": 93,
+      "x": 93,
+      "positive": true
+    },
+    {
+      "z": 20,
+      "y": 105,
+      "x": 93,
+      "positive": false
+    },
+    {
+      "z": 21,
+      "y": 93,
+      "x": 93,
+      "positive": true
+    },
+    {
+      "z": 21,
+      "y": 105,
+      "x": 93,
+      "positive": false
+    },
+    {
+      "z": 22,
+      "y": 93,
+      "x": 93,
+      "positive": true
+    },
+    {
+      "z": 22,
+      "y": 105,
+      "x": 93,
+      "positive": false
+    },
+    {
+      "z": 23,
+      "y": 93,
+      "x": 93,
+      "positive": true
+    },
+    {
+      "z": 23,
+      "y": 105,
+      "x": 93,
+      "positive": false
+    },
+    {
+      "z": 24,
+      "y": 92,
+      "x": 93,
+      "positive": true
+    },
+    {
+      "z": 24,
+      "y": 104,
+      "x": 93,
+      "positive": false
+    }
+  ],
+  "caption": "Procedurally generated input and complete known reference labels. All 25 Z slices include labelled structures. This interaction does not run a segmentation model."
+};

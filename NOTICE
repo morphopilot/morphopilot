@@ -1,0 +1,8 @@
+MorphoPilot
+Copyright 2026 MorphoPilot contributors
+
+MorphoPilot is an open-source volumetric annotation and training application.
+It integrates nnInteractive and nnU-Net, whose code and model
+artifacts retain their respective licenses and attribution requirements.
+See THIRD_PARTY_NOTICES.md and vendor/ for notices. The project license does
+not grant rights to external model weights or unpublished research datasets.

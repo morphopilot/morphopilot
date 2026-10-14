@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import ts from 'typescript';
+const compiled=ts.transpileModule(readFileSync(new URL('../lib/round-history.ts',import.meta.url),'utf8'),{compilerOptions:{module:ts.ModuleKind.ESNext,target:ts.ScriptTarget.ES2022}}).outputText;
+const {firstRoundSlice,isRecordedRoundMask}=await import('data:text/javascript;base64,'+Buffer.from(compiled).toString('base64'));
+const history={round:4,input_model_id:'model_m3',output_model_id:'model_m4',imported_revision:24,slice_indices:[5,4,6,3,7,2,8]};
+assert.equal(firstRoundSlice(history),5);
+assert.equal(firstRoundSlice({...history,slice_indices:[0,1]}),0);
+assert.equal(firstRoundSlice(undefined),undefined);
+assert.equal(isRecordedRoundMask(history,{revision:24,confirmed:true,model_id:'model_m3'}),true);
+assert.equal(isRecordedRoundMask(history,{revision:25,confirmed:true,model_id:'model_m3'}),false);
+assert.equal(isRecordedRoundMask(history,{revision:24,confirmed:false,model_id:'model_m3'}),false);
+assert.equal(isRecordedRoundMask(history,{revision:24,confirmed:true,model_id:'model_m4'}),false);
+console.log('PASS: incoming-model provenance, reopened/changed-mask detection, and initial prompted Z slice');

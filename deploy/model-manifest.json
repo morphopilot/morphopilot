@@ -1,0 +1,15 @@
+{
+  "repo_id": "MIC-DKFZ/nnInteractive",
+  "revision": "3f308d751c00644e4fde6f09c600264b393b21b5",
+  "model": "nnInteractive_v1.0",
+  "license": "CC-BY-NC-SA-4.0",
+  "nninteractive_commit": "bbe12fdccc876cb2d4e0a47133811e362608e000",
+  "nnunet_commit": "0e495086eb108ff79afe106291e8c15bd2f2bc3a",
+  "sha256": {
+    "plans.json": "64a30a430438302a692a3edadd345a207b3428bea2e5cdc125298757da21f4d4",
+    "dataset.json": "e090394ac539b2823b2135173658190245c462cb042d3442487e4829f08252c4",
+    "inference_session_class.json": "8f43587a9d139fcf7af8776219e9432dab079f985cb0d7da72a4c851b39a4f09",
+    "LICENSE": "4f60f5747c5506020923866690c2a41a3c74ffa85b7371eac2b02e23185f91d5",
+    "fold_0/checkpoint_final.pth": "b3ac4421f85457bbd1aa0d87f5e67bcb7bc8e2ce6b824b6ac45077cc5d630ea9"
+  }
+}

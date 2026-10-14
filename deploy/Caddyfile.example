@@ -1,0 +1,9 @@
+# Replace the hostname; set MORPHOPILOT_PUBLIC_ORIGIN to the identical https URL
+# and MORPHOPILOT_COOKIE_SECURE=1 in deploy/local.env. Keep the Python app loopback-only.
+morphopilot.example.org {
+    reverse_proxy 127.0.0.1:8787 {
+        transport http {
+            response_header_timeout 600s
+        }
+    }
+}

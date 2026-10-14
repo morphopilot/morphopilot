@@ -1,0 +1,26 @@
+name: Bug report
+description: Report a reproducible problem using public or synthetic data.
+title: "[Bug] "
+body:
+  - type: textarea
+    attributes:
+      label: What happened?
+      description: Describe the actual and expected behavior.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Steps to reproduce
+      description: Prefer examples/generate_synthetic.py. Do not attach private images, checkpoints, or credentials.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Environment
+      description: Commit/version, OS, browser, Python, Node, GPU/driver if applicable, and CPU/GPU install mode.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Redacted logs or synthetic screenshot
+      description: Remove passwords, bearer tokens, identifiable data, and private server addresses.

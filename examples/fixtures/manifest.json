@@ -1,0 +1,145 @@
+{
+  "license": "Apache-2.0",
+  "synthetic": true,
+  "numpy_version": "2.2.6",
+  "tifffile_version": "2025.5.10",
+  "seed": 20261013,
+  "generator": "examples/generate_synthetic.py",
+  "neurite_shape_zyx": [
+    25,
+    384,
+    384
+  ],
+  "spot_shape_zyx": [
+    25,
+    192,
+    192
+  ],
+  "purpose": "Reproducible upload/tiling/rendering tests, not a segmentation-performance benchmark.",
+  "generation": "Compact anisotropic Gaussian tube/spot primitives, complete geometric support masks, seeded additive noise. Boundary structures ensure foreground in every Z plane. No biological acquisitions or trained models used.",
+  "coverage": {
+    "neurite": {
+      "bright_threshold_uint16": 400,
+      "bright_voxels": 86492,
+      "unmasked_bright_voxels": 0,
+      "reference_voxels_per_z": [
+        660,
+        841,
+        1158,
+        1673,
+        2767,
+        4087,
+        5607,
+        7194,
+        8663,
+        9256,
+        8957,
+        8439,
+        7912,
+        7242,
+        6991,
+        7334,
+        7324,
+        7089,
+        6483,
+        5608,
+        4392,
+        3251,
+        2211,
+        1479,
+        933
+      ]
+    },
+    "spot": {
+      "bright_threshold_uint16": 400,
+      "bright_voxels": 4051,
+      "unmasked_bright_voxels": 0,
+      "reference_voxels_per_z": [
+        125,
+        203,
+        241,
+        243,
+        219,
+        212,
+        316,
+        453,
+        510,
+        414,
+        325,
+        255,
+        307,
+        325,
+        314,
+        319,
+        351,
+        392,
+        392,
+        362,
+        265,
+        173,
+        99,
+        109,
+        118
+      ]
+    }
+  },
+  "reproducibility": "Array values are deterministic for a fixed NumPy version. TIFF/WebP bytes may differ across library versions.",
+  "files": [
+    {
+      "file": "neurites.tif",
+      "role": "input",
+      "synthetic": true,
+      "shape_zyx": [
+        25,
+        384,
+        384
+      ],
+      "dtype": "uint16",
+      "sha256": "d7f049413b649bf7d0087314e619fa6c583fa4021653e2b596a8e187562ee80a",
+      "array_sha256": "488c2dbe89aa897b5615a64162e4e3ee1a65ec93026b97e68c5e7c02e21ca945",
+      "bytes": 4378382
+    },
+    {
+      "file": "neurites_reference.tif",
+      "role": "known procedural reference; NOT model output",
+      "synthetic": true,
+      "shape_zyx": [
+        25,
+        384,
+        384
+      ],
+      "dtype": "uint8",
+      "sha256": "46eaedf50ea5ee2c282300a27638e6377b256b8faa62e2bcf19e54672942ca10",
+      "array_sha256": "af8962f3f5102e91a7d356db6a958ec9929d04708b27325ff4e365ae7769f1db",
+      "bytes": 69319
+    },
+    {
+      "file": "spots.tif",
+      "role": "input",
+      "synthetic": true,
+      "shape_zyx": [
+        25,
+        192,
+        192
+      ],
+      "dtype": "uint16",
+      "sha256": "3ce450ed831980aba39aa050704c6d6a4f7c03867e589ae6e4df9d00a039b206",
+      "array_sha256": "dd2473999cd1a7449db2c4d5d9492ff2e1e4b2b755da91e0e336f0106b4a494e",
+      "bytes": 1089969
+    },
+    {
+      "file": "spots_reference.tif",
+      "role": "known procedural reference; NOT model output",
+      "synthetic": true,
+      "shape_zyx": [
+        25,
+        192,
+        192
+      ],
+      "dtype": "uint8",
+      "sha256": "9dff9df0bf6d7e473ff93f6baa197f666e58c8093576dfa6c1b4eed832d9d412",
+      "array_sha256": "68e5cb32d36481210c683ec49149100278e55fb202035205d1d7b04c77f3cef4",
+      "bytes": 11127
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "license": "Apache-2.0",
+  "synthetic": true,
+  "is_model_prediction": false,
+  "seed": 20261013,
+  "generator": "examples/generate_synthetic.py",
+  "neurite_fixture_shape_zyx": [
+    25,
+    384,
+    384
+  ],
+  "spot_fixture_shape_zyx": [
+    25,
+    192,
+    192
+  ],
+  "comparison_crop_origin_zyx": [
+    0,
+    96,
+    96
+  ],
+  "comparison_shape_zyx": [
+    25,
+    192,
+    192
+  ],
+  "hero_shape_zyx": [
+    25,
+    448,
+    512
+  ],
+  "checked_in_fixture_manifest": "examples/fixtures/manifest.json",
+  "checked_in_inputs": [
+    "examples/fixtures/neurites.tif",
+    "examples/fixtures/spots.tif"
+  ],
+  "checked_in_references": [
+    "examples/fixtures/neurites_reference.tif",
+    "examples/fixtures/spots_reference.tif"
+  ],
+  "rendering": "Known synthetic input/reference arrays. Fixed display range 95\u20132395, gamma=0.72. Hero maximum-intensity projection is tinted green. Reference overlays are lime/orange; the spot overlay uses #ff781f at 92% opacity. Training illustrations are conceptual image/binary-mask input pairs and optimization diagrams. No real research images, weights, or screenshots.",
+  "assets": [
+    {
+      "file": "hero-neurites.webp",
+      "sha256": "f8776658ed1bd13e40b88d48e5f74fcf2790d64663a3d5195cee9fe4511ce85d"
+    },
+    {
+      "file": "hero.png",
+      "sha256": "e9931f17c1934ca769f319b56d5564df0440ee93638aa0f016725c2f3a99aa7e"
+    },
+    {
+      "file": "neurite-mask.webp",
+      "sha256": "5d7efc84e273dc39d099f99714b1e396ce8728a97c03c6b140d6cbaa6aa641ac"
+    },
+    {
+      "file": "neurite-raw.webp",
+      "sha256": "cf5a699c467101da167a75b7d3cd917c62f7c5a816a97dc6e37acedb63e2a136"
+    },
+    {
+      "file": "spot-mask.webp",
+      "sha256": "4af1eb5679b822149e35260e57008cf97dae350b7fb94a87dfcac06c6db19374"
+    },
+    {
+      "file": "spot-raw.webp",
+      "sha256": "33f1811c374268d7cd5287c2888e5d55c8c23e4f1bfcaf6a13558c7ccf9c68fd"
+    },
+    {
+      "file": "spot-stack-mask.webp",
+      "sha256": "ce22b36208798dddeab8ebdde51d9c12272bea67beb6ff232c015fd2687a497b"
+    },
+    {
+      "file": "spot-stack-raw.webp",
+      "sha256": "6a546f30dc337415316444553be28e5249a602b622edd8f0b829a203c3e0eb95"
+    },
+    {
+      "file": "stack-mask.webp",
+      "sha256": "43bf1cc31ce623c6f77e7b0a99d9e96603b3dff0cedfea2fa862bc6cb3a14790"
+    },
+    {
+      "file": "stack-raw.webp",
+      "sha256": "b95cede1d9c759d5ab9664a55868c0f845aa449e4b10f9e7faf300681f3d572f"
+    },
+    {
+      "file": "training-pairs.png",
+      "sha256": "3bf2dc869f891e8591afa0c1a72bc3eb0d5bbe2a6e73071477f214acba10aef7"
+    },
+    {
+      "file": "workflow-figure.png",
+      "sha256": "bf4f287ba6639ed3af345a12976bc2f538af0c43798333024d4f6e355cbbbd9c"
+    }
+  ],
+  "copy_note": "Examples demonstrate the interface, file format and anatomy-like geometry, not scientific or model accuracy."
+}

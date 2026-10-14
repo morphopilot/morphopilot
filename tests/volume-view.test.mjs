@@ -1,0 +1,22 @@
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import ts from 'typescript';
+const compiled=ts.transpileModule(readFileSync(new URL('../lib/volume-view.ts',import.meta.url),'utf8'),{compilerOptions:{module:ts.ModuleKind.ESNext,target:ts.ScriptTarget.ES2022}}).outputText;
+const {renderSlice}=await import('data:text/javascript;base64,'+Buffer.from(compiled).toString('base64'));
+// Non-square XY slices prevent a swapped stride from passing unnoticed.
+const shape=[2,2,3],image=Uint8Array.from([0,10,20,30,40,50,100,110,120,130,140,150]),mask=new Uint8Array(12);
+const originalImage=image.slice(),originalMask=mask.slice();
+const first=renderSlice(image,mask,shape,0,0),last=renderSlice(image,mask,shape,1,0);
+assert.deepEqual(Array.from(first).filter((_,i)=>i%4===0),[0,10,20,30,40,50]);
+assert.deepEqual(Array.from(last).filter((_,i)=>i%4===0),[100,110,120,130,140,150]);
+assert.notDeepEqual(first,last);
+assert.equal(renderSlice(image,mask,shape,0,0,200)[16],80);
+assert.equal(renderSlice(image,mask,shape,0,0,100,50)[4],69);
+assert.deepEqual(renderSlice(image,mask,shape,0,0,100,100),first);
+assert.deepEqual(image,originalImage);assert.deepEqual(mask,originalMask);
+mask[6]=1;const overlay=renderSlice(image,mask,shape,1,100,200,50);assert.deepEqual(Array.from(overlay.slice(0,4)),[40,225,171,255]);
+assert.equal(renderSlice(image,mask,shape,0,100)[0],0);
+assert.throws(()=>renderSlice(image,mask,shape,2,0),/Z/);
+assert.throws(()=>renderSlice(image,mask,shape,-1,0),/Z/);
+assert.throws(()=>renderSlice(image.slice(1),mask,shape,0,0),/incomplete/i);
+console.log('PASS: ZYX slice indexing, distinct planes, brightness/contrast, reset, mask separation, immutability and invalid payload rejection');

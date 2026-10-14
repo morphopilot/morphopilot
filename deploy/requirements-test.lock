@@ -1,0 +1,2 @@
+# Install after requirements-cpu.lock or requirements-gpu.lock.
+pytest==9.1.1
